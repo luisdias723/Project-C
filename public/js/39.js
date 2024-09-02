@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[39],{1039:(e,r,t)=>{t.r(r),t.d(r,{default:()=>u});const u={beforeCreate:function(){var e=this.$route,r=e.params,t=e.query,u=r.path;this.$router.replace({path:"/"+u,query:t})},render:function(e){return e()}}}}]);

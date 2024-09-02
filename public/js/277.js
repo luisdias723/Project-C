@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[277],{6277:(e,n,o)=>{o.r(n),o.d(n,{default:()=>t});const t=(0,o(8222).aZ)({name:"AuthRedirect",created:function(){var e=window.location.search.slice(1);window.localStorage&&(window.localStorage.setItem("x-admin-oauth-code",e),window.close())},render:function(e){return e()}})}}]);

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'abril-bold';
+  src: url('/Fonts/Abril_Display_Bold.otf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'abril-extra-bold';
+  src: url('/Fonts/Abril_Display_ExtraBold.otf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'openSans';
+  src: url('/Fonts/OpenSans-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+
+//global transition css
+
+/*fade*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/*fade-transform*/
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .5s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/*fade*/
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}

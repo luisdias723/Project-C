@@ -1,0 +1,47 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 0px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'abril-bold';
+  src: url('/Fonts/Abril_Display_Bold.otf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'abril-extra-bold';
+  src: url('/Fonts/Abril_Display_ExtraBold.otf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'openSans';
+  src: url('/Fonts/OpenSans-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+

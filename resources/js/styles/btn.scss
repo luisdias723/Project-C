@@ -1,0 +1,318 @@
+@import './variables.scss';
+
+@mixin colorBtn($color) {
+  background: $color;
+
+  &:hover {
+    color: $color;
+
+    &:before,
+    &:after {
+      background: $color;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'abril-bold';
+  src: url('/Fonts/Abril_Display_Bold.otf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'abril-extra-bold';
+  src: url('/Fonts/Abril_Display_ExtraBold.otf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'openSans';
+  src: url('/Fonts/OpenSans-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+
+.blue-btn {
+  @include colorBtn($blue)
+}
+
+.light-blue-btn {
+  @include colorBtn($light-blue)
+}
+
+.red-btn {
+  @include colorBtn($red)
+}
+
+.pink-btn {
+  @include colorBtn($pink)
+}
+
+.green-btn {
+  @include colorBtn($green)
+}
+
+.tiffany-btn {
+  @include colorBtn($tiffany)
+}
+
+.yellow-btn {
+  @include colorBtn($yellow)
+}
+
+.pan-btn {
+  font-size: 14px;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  transition: 600ms ease all;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    background: #fff;
+
+    &:before,
+    &:after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    transition: 400ms ease all;
+  }
+
+  &::after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.custom-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  color: #fff;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 0px;
+}
+
+.el-button+.el-button,
+a+.el-button,
+.el-input+.el-button {
+  margin-left: 5px;
+}
+
+.el-button--primary:not(.is-plain, .is-text, .is-disabled),
+.fc .fc-button-primary {
+  background: #7AB68E !important;
+  border-color: #aeafaf !important;
+  color: #fff;
+}
+
+.el-button--primary:not(.is-plain, .is-text, .cortejoBtn):hover {
+  background: #7ab68e00 !important;
+  border-color: #7AB68E !important;
+  color: #fff !important;
+}
+
+.el-button--primary:not(.is-plain, .is-text, .cortejoBtn) {
+  color: #fff !important;
+}
+
+.el-button--secondary:not(.is-plain, .is-text, .is-disabled):hover {
+  background: rgb(122 182 142 / 7%) !important;
+  border-color: #7AB68E !important;
+  color: #fff !important;
+}
+
+.cortejoBtn.is-plain {
+  background: rgb(122 182 142 / 7%) !important;
+  border-color: #7AB68E !important;
+  color: #7AB68E;
+}
+
+.cortejoBtn:hover {
+  color: white !important;
+  background: #7AB68E !important;
+}
+
+.el-button.el-button--primary:not(.cortejoBtn, .primaryRo, .primaryBlue, .primaryYellow, .primaryOrange):hover {
+  color: #7AB68E !important;
+}
+
+// .el-button.el-button--primary:not(.cortejoBtn, .primaryRo, .primaryBlue, .primaryYellow, .primaryOrange):focus {
+//   color: #7AB68E !important;
+// }
+
+.cortejoBtn.is-plain:hover {
+  background: #7AB68E !important;
+  border-color: #7AB68E !important;
+  color: white !important;
+}
+
+.cortejoBtn.is-plain:focus {
+  color: #fff !important;
+}
+
+.cortejoBtn:focus {
+  color: #7AB68E !important;
+}
+
+.cortejoBtn:hover {
+  color: #7AB68E !important;
+}
+
+.el-button--primary.is-disabled {
+  background: #5d7694 !important;
+  border-color: #5d7694 !important;
+  color: #fff;
+}
+
+.el-button--primary:hover {
+  color: #7AB68E !important;
+}
+
+.el-button--primary:focus {
+  color: white !important;
+}
+
+// .el-button--primary:not(.is-plain) {
+//   background: #0A2240 !important;
+//   border-color: #0A2240 !important;
+// }
+
+
+.el-link.el-link--primary,
+.el-menu-item.is-active  {
+  color: #857550 !important;
+  text-decoration-color: #857550 !important;
+}
+
+.el-link.el-link--primary:hover,
+.el-menu-item.is-active:hover{
+  color: #857550 !important;
+  text-decoration-color: #857550 !important;
+}
+
+.el-form-item__content > .el-input .el-input__wrapper,
+.select-trigger .el-input .el-input__wrapper,
+.el-input .el-input__wrapper{
+  border-radius: 0px !important;
+}
+
+.el-menu-item svg,
+.el-sub-menu svg{
+  color: #857550 !important;
+}
+
+.sidebar-container .el-menu-item,
+.sidebar-container .el-sub-menu .el-sub-menu__title{
+  height: 35px;
+}
+
+.sidebar-container .el-sub-menu{
+  margin-bottom: 11px;
+}
+
+.el-date-table td.disabled .el-date-table-cell {
+  background-color: #ffffff !important;
+  color: #d2d2d2 !important;
+}
+
+.el-button.el-button--danger {
+  background-color: #F4858E !important;
+  border-color: #F4858E !important;
+}
+
+.el-button.el-button--danger:hover {
+  background-color: #f4858e70 !important;
+  border-color: #F4858E !important;
+}
+
+.el-button.el-button--primary.primaryOrange {
+  background-color: #F69679 !important;
+  border-color: #F69679 !important;
+}
+
+.el-button.el-button--primary.primaryOrange:hover {
+  background-color: #f6967980 !important;
+  border-color: #F69679 !important;
+}
+
+.el-button.el-button--primary.primaryRo {
+  background-color: #C797C5 !important;
+  border-color: #C797C5 !important;
+}
+
+.el-button.el-button--primary.primaryRo:hover {
+  background-color: #c797c583 !important;
+  border-color: #C797C5 !important;
+}
+
+.el-button.el-button--primary.primaryBlue {
+  background-color: #7BAFDE !important;
+  border-color: #7BAFDE !important;
+}
+
+.el-button.el-button--primary.primaryBlue:hover {
+  background-color: #7bb0de7a !important;
+  border-color: #7BAFDE !important;
+}
+
+.el-button.el-button--primary.primaryYellow {
+  background-color: #FFDA91 !important;
+  border-color: #FFDA91 !important;
+}
+
+.el-button.el-button--primary.primaryYellow:hover {
+  background-color: #ffda9169 !important;
+  border-color: #FFDA91 !important;
+}
+
+.el-button.el-button--primary.is-disabled{
+  background-color: #7bb0de9a !important;
+  border-color: #7BAFDE !important;
+}
+
+.el-button.el-button--danger.is-disabled {
+  background-color: #f4858e70 !important;
+  border-color: #F4858E !important;
+}
+
+.el-button.is-link.primaryOrange {
+  color: #F69679C4 !important;
+}
+
+.el-link.el-link--default.primaryOrange {
+  color: #F69679C4 !important;
+}
+
+.el-button{
+  font-family: 'openSans', sans-serif !important;
+  border-radius: 0px !important;
+}
+
+a.primaryOrange {
+  color: #F69679C4 !important;
+}
